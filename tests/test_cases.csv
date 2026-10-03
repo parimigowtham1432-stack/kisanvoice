@@ -1,0 +1,36 @@
+test_case_id,test_type,crop_stage,input_statement,expected_crop,expected_activity,expected_amount,expected_date
+TC001,Positive,Land Preparation,"Today I spent 5000 rupees for ploughing the field for red chilli cultivation.",red chilli,ploughing,5000,02/10/2026
+TC002,Positive,Land Preparation,"I paid 3000 for land leveling before planting chilli.",chilli,land leveling,3000,02/10/2026
+TC003,Positive,Seed Purchase,"I purchased red chilli seeds for 2500 rupees.",red chilli,seed purchase,2500,02/10/2026
+TC004,Positive,Nursery,"I spent 1500 rupees to prepare the chilli nursery.",chilli,nursery preparation,1500,02/10/2026
+TC005,Positive,Seed Treatment,"Today I paid 500 rupees for treating chilli seeds.",chilli,seed treatment,500,02/10/2026
+TC006,Positive,Transplanting,"I paid 6000 rupees for transplanting chilli seedlings.",chilli,transplanting,6000,02/10/2026
+TC007,Positive,Fertilizer,"I bought fertilizer for the chilli crop for 4000 rupees.",chilli,fertilizer purchase,4000,02/10/2026
+TC008,Positive,Irrigation,"I spent 2000 rupees for irrigating the chilli field.",chilli,irrigation,2000,02/10/2026
+TC009,Positive,Weeding,"I paid 5000 rupees for removing weeds from the chilli field.",chilli,deweeding,5000,02/10/2026
+TC010,Positive,Pest Control,"Today I spent 5000 rupees on pesticide spraying for chilli.",chilli,pesticide spraying,5000,02/10/2026
+TC011,Positive,Disease Control,"I spent 3000 rupees for spraying fungicide on the chilli crop.",chilli,fungicide spraying,3000,02/10/2026
+TC012,Positive,Labour,"I paid 4000 rupees to workers for chilli field maintenance.",chilli,labour,4000,02/10/2026
+TC013,Multiple Expense,Pest + Labour,"Today I spent 5000 for pesticide spraying and 10000 for labour for deweeding in my chilli crop.",chilli,pesticide spraying; deweeding,5000; 10000,02/10/2026
+TC014,Multiple Expense,Fertilizer + Irrigation,"I spent 3000 on fertilizer and 2000 on irrigation for the chilli field.",chilli,fertilizer; irrigation,3000; 2000,02/10/2026
+TC015,Positive,Harvesting,"Today I paid 7000 rupees for harvesting red chillies.",red chilli,harvesting,7000,02/10/2026
+TC016,Positive,Sorting,"I spent 2000 rupees for sorting the harvested chillies.",chilli,sorting,2000,02/10/2026
+TC017,Positive,Drying,"I paid 3000 rupees for drying red chillies.",red chilli,drying,3000,02/10/2026
+TC018,Positive,Packing,"I spent 2500 rupees for packing dried chillies.",chilli,packing,2500,02/10/2026
+TC019,Positive,Transportation,"I paid 4000 rupees to transport dried chillies to the market.",chilli,transportation,4000,02/10/2026
+TC020,Positive,Selling,"Today I sold my red chillies for 45000 rupees.",red chilli,selling,45000,02/10/2026
+TC021,Missing Amount,Pesticide,"I sprayed pesticide on my chilli crop today.",chilli,pesticide spraying,,02/10/2026
+TC022,Missing Crop,Pesticide,"I spent 5000 rupees for pesticide spraying.",,pesticide spraying,5000,02/10/2026
+TC023,Currency Format,Pesticide,"I spent ₹5,000 on chilli pesticide spraying.",chilli,pesticide spraying,5000,
+TC024,Amount in Words,Pesticide,"I spent five thousand rupees on chilli spraying.",chilli,pesticide spraying,5000,02/10/2026
+TC025,Multiple Amounts,Multiple Expense,"I spent 5000 for spraying and 10000 for labour.",,pesticide spraying; labour,5000; 10000,02/10/2026
+TC026,Relative Date,Fertilizer,"Yesterday I spent 3000 rupees on chilli fertilizer.",chilli,fertilizer,3000,01/10/2026
+TC027,Explicit Date,Fertilizer,"On 25 September 2026 I spent 4000 on chilli fertilizer.",chilli,fertilizer,4000,25/09/2026
+TC028,Missing Date,Seed Purchase,"I purchased chilli seeds for 2500 rupees.",chilli,seed purchase,2500,02/10/2026
+TC029,Negative,Irrelevant,"Today I went to college and attended a class.",,,,
+TC030,Ambiguous,Field Work,"I spent 5000 on the field.",,,5000,02/10/2026
+TC031,Decimal Amount,Fertilizer,"I spent 2500.50 rupees for chilli fertilizer.",chilli,fertilizer,2500.50,02/10/2026
+TC032,Multiple Crops,Fertilizer,"I spent 5000 on chilli and 3000 on cotton fertilizer.",chilli; cotton,fertilizer; fertilizer,5000; 3000,02/10/2026
+TC033,Code Mixed,Pesticide,"Ee roju chilli crop ki pesticide spraying kosam 5000 rupees spend chesanu.",chilli,pesticide spraying,5000,02/10/2026
+TC034,Normalization,Pesticide,"Today I spent five thousand for spraying pesticides in mirchi crop.",chilli,pesticide spraying,5000,02/10/2026
+TC035,Repeated Activity,Pesticide,"I sprayed pesticides twice today, spending 3000 and 2500 rupees.",,pesticide spraying; pesticide spraying,3000; 2500,02/10/2026
