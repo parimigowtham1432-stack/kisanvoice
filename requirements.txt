@@ -1,5 +1,8 @@
 # Core project
 openpyxl>=3.1.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pytest>=8.0.0
 
 # Optional: install if you later add spaCy-based NLP models
 spacy>=3.7.0

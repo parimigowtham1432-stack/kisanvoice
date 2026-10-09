@@ -1,0 +1,44 @@
+name: KisanVoice CI
+
+on:
+  pull_request:
+    branches:
+      - "**"
+  push:
+    branches:
+      - main
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run test suite
+        run: pytest -q
+
+      - name: Build application artifact
+        run: |
+          mkdir -p dist
+          tar -czf "dist/kisanvoice-${GITHUB_SHA}.tar.gz" app main.py README.md requirements.txt
+
+      - name: Publish artifact to GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: kisanvoice-build
+          path: dist/*.tar.gz
+          if-no-files-found: error
